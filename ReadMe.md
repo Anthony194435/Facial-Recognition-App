@@ -5,8 +5,8 @@ Create 2 s3 buckets
 
 # Step 2: 
 Create a Registration Lambda 
-- create an IAM role for lambda with this permissions
-- Name: Lambda Role
+  - create an IAM role for lambda with this permissions
+  - Name: Lambda Role
   {
   "Version": "2012-10-17",
   "Statement": [
