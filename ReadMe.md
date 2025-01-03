@@ -72,7 +72,8 @@ Create an AWS API Gateway that will use to call the lambda and upload image to s
   - Name: Facial_Rekog_API_Role
   - attach an inline policy
 
-  ![image](https://github.com/user-attachments/assets/40f22621-8048-4984-8381-b0624b0add7a)
+![Screenshot 2025-01-03 162851](https://github.com/user-attachments/assets/500d9a66-c6d5-449d-91b9-4f5755487a7b)
+
 
 
 # Create a Rest API
