@@ -1,27 +1,18 @@
 # Step 1:
-Create 2 s3 buckets 
-- employee-image-storage-bucket
-- s3-vistor-pics
+Create two S3 buckets 
+# Name: employee-image-storage-bucket
+- Block Public Access
+- Eable Server Side Encryption
+# Name: s3-vistor-pics
+- Block Public Access
+- Eable Server Side Encryption
 
 # Step 2: 
 Create a Registration Lambda 
   - create an IAM role for lambda with this permissions
   - Name: Lambda Role
-  {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:*",
-        "dynamodb:*",
-        "rekognition:*",
-        "logs:*"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
+  ![image](https://github.com/user-attachments/assets/ed8bbb00-7b25-48a9-b743-55f44d31b051)
+
 
 
 # Create a Lambda function
