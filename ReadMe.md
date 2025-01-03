@@ -48,8 +48,8 @@ Create a dynamoDB that will store the employees details
 
 # Step 4
 Create AWS Rekognition using the AWS CLI
-This collection will be used to store and match facial data
- ` aws rekognition create-collection --collection-id employees --region us-east-1 `
+- This collection will be used to store and match facial data
+- ` aws rekognition create-collection --collection-id employees --region us-east-1 `
 Note!! Before you run this command, you must configure you AWS CLI
 
 # Upload the python code in the lambda:
