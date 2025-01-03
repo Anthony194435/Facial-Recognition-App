@@ -11,6 +11,7 @@ Create two S3 buckets
 Create a Registration Lambda 
   - create an IAM role for lambda with this permissions
   - Name: Lambda Role
+    
   ![image](https://github.com/user-attachments/assets/ed8bbb00-7b25-48a9-b743-55f44d31b051)
 
 
@@ -70,39 +71,8 @@ Create an AWS API Gateway that will use to call the lambda and upload image to s
   - service: API Gateway
   - Name: Facial_Rekog_API_Role
   - attach an inline policy
-   {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:PutObject",
-        "s3:GetObject",
-        "s3:DeleteObject"
-      ],
-      "Resource": "arn:aws:s3:::s3-visitor-pics/*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "lambda:InvokeFunction"
-      ],
-      "Resource": [
-        "arn:aws:lambda:us-east-1:<your-account-id>:function:Employee-registrations",
-        "arn:aws:lambda:us-east-1:<your-account-id>:function:Employee-authentication"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:us-east-1:<your-account-id>:*"
-    }
-  ]
-}
+
+  ![image](https://github.com/user-attachments/assets/40f22621-8048-4984-8381-b0624b0add7a)
 
 
 # Create a Rest API
@@ -166,13 +136,6 @@ under src, create a folder called visitors
 create a placehold imagein your machine and drag and drop under the visitors folder
 create a list of images with name vistor1.jpeg till 5 and drag and drop in the visitors folder. 
 
-
-# Command to create the rekognition
-aws rekognition create-collection --collection-id employees --region us-east-1
-
-
-
-
 # Step 9 
 - Troubleshooting
   * Lambda Timeouts:
@@ -184,4 +147,9 @@ aws rekognition create-collection --collection-id employees --region us-east-1
     Check the method execution logs in CloudWatch.
   * DynamoDB Issues:
     Verify that the rekognitionid partition key is being populated correctly.
+
+    # Step 10
+    Deploy the app on you local machine
+    `npm start`
+    
 
