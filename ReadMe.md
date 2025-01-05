@@ -117,20 +117,50 @@ This Lambda function compares uploaded images with stored images in S3 with Amaz
 - Click on root and select deploy API 
   * New stage and deploy.
 
-# Step 8: Create the React Frontend app
- - Install npx on your Dev env. 
- - `npm install -g npx`
- - `npx create-react-app facial-rekognition-app` // This command will create the react app
+# Step 8: Create the React Frontend App
+  Install npx:
+ - npm install -g npx
+   
+Create the React app:
+- npx create-react-app Facial-Recognition-App
+  
+Clean up the project:
+- Delete unnecessary files (logo, App.test.js, etc.).
+- Create a visitors folder under src and add placeholder images.
+  
+Create a .env File:
+- Add your API Gateway endpoint in a .env file to manage the API securely.
 
-NOTE !!!
-Click the src drowndown and delete logo, report, App.test and setup folders.
-inside the index.js folder, delete number 5 and 14 to 17
-delete the content of app.css
-under src, create a folder called visitors 
-create a placehold imagein your machine and drag and drop under the visitors folder
-create a list of images with name vistor1.jpeg till 5 and drag and drop in the visitors folder. 
+REACT_APP_API_BASE_URL=https://<your-api-gateway-endpoint>
+Use the environment variable in your React app:
 
-# Step 9: Troubleshooting
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const response = await fetch(`${BASE_URL}/employee?objectKey=${objectKey}`);
+
+# Step 9 Deploy the App with AWS Amplify
+# Push the App to GitHub
+   Initialize a git repository in your project:
+   `git init` 
+   `git remote add origin <your-repository-url>`
+   `git add .`
+   `git commit -m "Initial commit"`
+   `git push -u origin main`
+   
+# Deploy with AWS Amplify
+ - Go to the AWS Management Console.
+ - Search for Amplify and create a new app.
+ - Connect your GitHub repository:
+ - Authorize Amplify to access your GitHub account.
+ - Select your repository and branch.
+ - Configure build settings:
+ - Deploy the app.
+   
+# Test Your Live App
+Amplify provides a live URL for your app.
+Test the app using the provided URL.
+
+
+# Step 10: Troubleshooting
   * Lambda Timeouts:
     Increase the timeout settings in the Lambda function configuration.
     Enable CloudWatch logs to see any errors in your function
