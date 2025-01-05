@@ -11,7 +11,7 @@ Create a Registration Lambda
   - create an IAM role for lambda with this permissions
   - Name: Lambda Role
     
-  ![image](https://github.com/user-attachments/assets/ed8bbb00-7b25-48a9-b743-55f44d31b051)
+![Screenshot 2025-01-04 215038](https://github.com/user-attachments/assets/57ca2d45-e526-4c18-91c8-c9e355bcb005)
 
 
 
@@ -71,7 +71,7 @@ Create an AWS API Gateway that will use to call the lambda and upload image to s
   - Name: Facial_Rekog_API_Role
   - attach an inline policy
 
-![Screenshot 2025-01-03 162851](https://github.com/user-attachments/assets/500d9a66-c6d5-449d-91b9-4f5755487a7b)
+![image](https://github.com/user-attachments/assets/b1a69fe1-ba58-4c60-814d-149abaacc4b2)
 
 
 
