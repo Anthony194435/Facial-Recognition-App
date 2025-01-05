@@ -118,9 +118,9 @@ This Lambda function compares uploaded images with stored images in S3 with Amaz
   * New stage and deploy.
 
 # Step 8: Create the React Frontend app
-  - Install npx on your Dev env.
-   `npm install -g npx`
-   `npx create-react-app facial-rekognition-app` // This command will create the react app
+ - Install npx on your Dev env. 
+ - `npm install -g npx`
+ - `npx create-react-app facial-rekognition-app` // This command will create the react app
 
 NOTE !!!
 Click the src drowndown and delete logo, report, App.test and setup folders.
