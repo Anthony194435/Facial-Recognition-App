@@ -1,16 +1,13 @@
 # Step 1: Create Two S3 Buckets
-1. Bucket Name: employee-image-storage-bucket
-   
-   Block Public Access.
-   Enable Server-Side Encryption.
-   
-2. Bucket Name: s3-vistor-pics
-   Block Public Access.
-   Enable Server-Side Encryption.
+  * Name: employee-image-storage-bucket
+      - Block Public Access
+      - Eable Server Side Encryption
+ * Name: s3-vistor-pics
+     - Block Public Access
+     - Eable Server Side Encryption
  
 
-# Step 2: 
-Create a Registration Lambda 
+# Step 2: Create a Registration Lambda 
   - create an IAM role for lambda with this permissions
   - Name: Lambda Role
     
@@ -32,8 +29,7 @@ Create a Registration Lambda
 - Bucket: employee-image-storage-bucket.
 - Save the trigger.
 
-# Step 3
-Create a dynamoDB that will store the employees details
+# Step 3: Create a dynamoDB that will store the employees details
 - Create a table
 -  Name: employee
 -  Partition Key: rekognitionid (string)
