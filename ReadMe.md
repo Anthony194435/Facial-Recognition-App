@@ -36,8 +36,7 @@
 -  Sort key: None
 -  Leave the other configurations as default and click Create Table
 
-# Step 4
-Create AWS Rekognition using the AWS CLI
+# Step 4: Create AWS Rekognition using the AWS CLI
 - This collection will be used to store and match facial data
 - ` aws rekognition create-collection --collection-id employees --region us-east-1 `
 Note!! Before you run this command, you must configure you AWS CLI
@@ -47,12 +46,10 @@ Note!! Before you run this command, you must configure you AWS CLI
   - Copy the code and pasta it in the Employee- registrations lambda and deploy it.
   Name of the file: employee_regist.py
 
-# Step 5
-Prepare images of employees, ensuring the image filenames match the names of the employees.
+# Step 5: Prepare images of employees, ensuring the image filenames match the names of the employees.
 Upload the images to the employee-image-storage-bucket
 
-# Step 6
-Create the second lambda function for authentications
+# Step 6: Create the second lambda function for authentications
 This Lambda function compares uploaded images with stored images in S3 with Amazon Rekognition.
 - Name: employee authentication
 - RunTime: Python lastest version
@@ -63,8 +60,7 @@ This Lambda function compares uploaded images with stored images in S3 with Amaz
 
 
 
-# Step 7
-Create an AWS API Gateway that will use to call the lambda and upload image to s3 bucket
+# Step 7: Create an AWS API Gateway that will use to call the lambda and upload image to s3 bucket
 # Create a Role for API Gateway
   - service: API Gateway
   - Name: Facial_Rekog_API_Role
@@ -121,8 +117,7 @@ Create an AWS API Gateway that will use to call the lambda and upload image to s
 - Click on root and select deploy API 
   * New stage and deploy.
 
-# Step 8
-Create the React Frontend app
+# Step 8: Create the React Frontend app
 - install npx to my machine: 
   npm install -g npx
   Run: npx create-react-app facial-rekognition-app
@@ -135,8 +130,7 @@ under src, create a folder called visitors
 create a placehold imagein your machine and drag and drop under the visitors folder
 create a list of images with name vistor1.jpeg till 5 and drag and drop in the visitors folder. 
 
-# Step 9 
-- Troubleshooting
+# Step 9: Troubleshooting
   * Lambda Timeouts:
     Increase the timeout settings in the Lambda function configuration.
     Enable CloudWatch logs to see any errors in your function
