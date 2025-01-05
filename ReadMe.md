@@ -1,11 +1,10 @@
-# Step 1:
-Create two S3 buckets 
- Name: employee-image-storage-bucket
-- Block Public Access
-- Eable Server Side Encryption
- Name: s3-vistor-pics
-- Block Public Access
-- Eable Server Side Encryption
+# Step 1: Create Two S3 Buckets
+Bucket Name: employee-image-storage-bucket
+- Block Public Access.
+- Enable Server-Side Encryption.
+Bucket Name: s3-vistor-pics
+- Block Public Access.
+- Enable Server-Side Encryption.
 
 # Step 2: 
 Create a Registration Lambda 
