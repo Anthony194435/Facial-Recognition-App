@@ -140,11 +140,11 @@ const response = await fetch(`${BASE_URL}/employee?objectKey=${objectKey}`);
 # Step 9 Deploy the App with AWS Amplify
 # Push the App to GitHub
    Initialize a git repository in your project:
-   `git init` 
-   `git remote add origin <your-repository-url>`
-   `git add .`
-   `git commit -m "Initial commit"`
-   `git push -u origin main`
+  - `git init` 
+  - `git remote add origin <your-repository-url>`
+  - `git add .`
+  - `git commit -m "Initial commit"`
+  - `git push -u origin main`
    
 # Deploy with AWS Amplify
  - Go to the AWS Management Console.
@@ -171,8 +171,5 @@ Test the app using the provided URL.
   * DynamoDB Issues:
     Verify that the rekognitionid partition key is being populated correctly.
 
-    # Step 10
-    Deploy the app on you local machine
-    `npm start`
-    
+
 
