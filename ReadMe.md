@@ -1,3 +1,36 @@
+# Project Name: Ikechukwu's Facial Recognition System
+# Project Description
+Ikechukwu's Facial Recognition System is a cloud-based application that uses AWS services to streamline employee authentication through facial recognition. The system allows employees to register their facial data, which is stored securely and used for real-time authentication. It leverages Amazon Rekognition for facial matching, DynamoDB for employee data storage, Lambda functions for backend logic, and API Gateway to integrate with a React-based user interface. The app is deployed with AWS Amplify, providing a scalable and user-friendly experience. This project demonstrates a robust integration of machine learning, serverless architecture, and frontend technologies to solve real-world problems.
+
+# System Architecture Diagram
+ - System Architecture
+![Screenshot 2025-01-04 223123](https://github.com/user-attachments/assets/1448a526-6a39-4a5a-90d6-b586a17d5bf2)
+
+ - System Flow Explanation 
+   1. S3 Bucket (employee-image-storage-bucket):
+      Employee images are uploaded to the S3 bucket. This triggers the Employee-registrations Lambda function.
+   2. Employee-registrations Lambda Function:
+      - Retrieves the uploaded image from the S3 bucket.
+      - Adds facial data to the Amazon Rekognition collection ("employees").
+      - Stores employee details (including the Rekognition ID) in the DynamoDB table.
+   3. Amazon Rekognition (employees collection):
+      - Stores and manages facial data for employees, allowing facial matching for authentication.
+   4. DynamoDB (employee table):
+      - Stores employee information, such as the Rekognition ID, to be retrieved during authentication.
+   5. API Gateway (Facial Rekognition API):
+      - Exposes REST endpoints for the React application to communicate with the backend, such as for invoking the Employee-authentication Lambda function.
+   6. Employee-authentication Lambda Function:
+      - Matches the uploaded image (via the API) with facial data stored in Amazon Rekognition.
+      - Retrieves employee details from DynamoDB if a match is found and returns the response to the API Gateway.
+   7. React App (via AWS Amplify):
+      - Frontend interacts with the API Gateway to upload images and retrieve authentication results.
+      - Displays personalized messages (e.g., "Welcome to work") or error messages based on the authentication outcome.
+
+
+
+
+
+
 # Step 1: Create Two S3 Buckets
   * Name: employee-image-storage-bucket
       - Block Public Access
