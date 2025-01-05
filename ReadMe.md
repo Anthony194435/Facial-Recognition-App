@@ -1,9 +1,9 @@
 # Step 1:
 Create two S3 buckets 
-# Name: employee-image-storage-bucket
+ Name: employee-image-storage-bucket
 - Block Public Access
 - Eable Server Side Encryption
-# Name: s3-vistor-pics
+ Name: s3-vistor-pics
 - Block Public Access
 - Eable Server Side Encryption
 
