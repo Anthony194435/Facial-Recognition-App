@@ -187,10 +187,23 @@ const response = await fetch(`${BASE_URL}/employee?objectKey=${objectKey}`);
  - Select your repository and branch.
  - Configure build settings:
  - Deploy the app.
+![Screenshot 2025-01-04 214020](https://github.com/user-attachments/assets/77bfb2c6-12a0-45a6-8791-bb493fe77131)
+
    
 # Test Your Live App
 Amplify provides a live URL for your app.
 Test the app using the provided URL.
+
+** The landing page is this image below **
+![Screenshot 2025-01-04 201353](https://github.com/user-attachments/assets/5bf77036-e9b5-4fec-aa7b-184fd71c2e4b)
+
+**You are asked to upload a file or start camera to capture a phone and then press **Authenticate**
+**Successful Authentication**
+![Screenshot 2025-01-04 131912](https://github.com/user-attachments/assets/a79abfa9-1fe6-46f2-923a-5fdd0c768265)
+
+**Failed Authentication**
+![Screenshot 2025-01-04 131936](https://github.com/user-attachments/assets/ec61d0a8-6d34-451a-842a-b9309ee70044)
+
 
 
 # Step 10: Troubleshooting
