@@ -171,10 +171,10 @@ const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const response = await fetch(`${BASE_URL}/employee?objectKey=${objectKey}`);
 
 
-# Step 9Build, Push and Deploy the App with AWS Amplify
+# Step 9: Build, Push to Git, and Deploy the App with AWS Amplify
 # Build 
   - `npm run build` **A build folder will be created with the artifact**
-# Push the App to GitHub
+# Push the Project to GitHub
    Initialize a git repository in your project:
   - `git init` 
   - `git remote add origin <your-repository-url>`
